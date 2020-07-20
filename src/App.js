@@ -3,6 +3,8 @@ import "./App.scss";
 import Menu from "./comps/Menu";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Suggest from "./comps/Suggest";
+import { ReactComponent as CloseIcon } from "./icons/close.svg";
+import { ReactComponent as MenuIcon } from "./icons/menu.svg";
 
 function Home() {
   const [open, setOpen] = useState(false);
@@ -10,7 +12,7 @@ function Home() {
   return (
     <div className="main">
       <div className="menu-icon" onClick={() => setOpen(!open)}>
-        {open ? "Close" : "Menu"}
+        {!open ? <MenuIcon /> : <CloseIcon fill="white" />}
       </div>
       {open ? <Menu /> : null}
       <div className="main-pic">photo</div>
