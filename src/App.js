@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import "./App.scss";
-import Menu from './comps/Menu'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
-import Suggest from './comps/Suggest'
+import Menu from "./comps/Menu";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Suggest from "./comps/Suggest";
 
 function Home() {
-
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="main">
-      <div className="menu-icon" onClick={() => setOpen(!open)}>{open ? 'Close' : 'Menu'}</div>
-      {
-        open ? <Menu /> : null
-      }
+      <div className="menu-icon" onClick={() => setOpen(!open)}>
+        {open ? "Close" : "Menu"}
+      </div>
+      {open ? <Menu /> : null}
       <div className="main-pic">photo</div>
       <div className="main-content">
         <span className="main-content-title">
@@ -36,15 +35,17 @@ function Home() {
   );
 }
 
-function App () {
+function App() {
   return (
     <div>
       <Router>
-        <Route path="/" exact component={Home} />
-        <Route path="/suggest" component={Suggest} />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/suggest" component={Suggest} />
+        </Switch>
       </Router>
     </div>
-  )
+  );
 }
 
 export default App;
