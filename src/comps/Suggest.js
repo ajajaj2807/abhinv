@@ -33,6 +33,10 @@ export default function Suggest() {
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1, transition: transitions }}
         >
+          <button className="back" onClick={() => setSlide(0)}>
+            {" "}
+            &larr; Back
+          </button>
           <div className="title">Basic Details</div>
           <div className="des">
             This information is just to contact you if required blah blah
@@ -53,6 +57,11 @@ export default function Suggest() {
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1, transition: transitions }}
         >
+          <button className="back" onClick={() => setSlide(1)}>
+            {" "}
+            &larr; Back
+          </button>
+
           <div className="title">Your Suggestion</div>
           <div className="des">Please be clear blah blah some text here</div>
           <div className="form-content">
@@ -75,7 +84,7 @@ export default function Suggest() {
             Your response has been successfully shared lauda lasusn
           </span>
           <div className="controls">
-            <button>Submit Another</button>
+            <button onClick={() => setSlide(0)}>Submit Another</button>
             <button>Back to Home</button>
           </div>
         </motion.div>
