@@ -115,6 +115,52 @@ body {
       align-items: flex-end;
       color: wheat;
       font-weight: 500;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      flex-direction: column;
+      .btns{
+        .btn{
+          cursor: pointer;
+          height: 150px;
+          width: 250px;
+          background-color: #fee;
+          position: relative;
+          margin: 1rem 0;
+          border: 2px solid #E55934;
+          transition: all ease-in-out 200ms;
+          &:hover{
+            border: 2px solid #944;
+            .arrow{
+              transform: translateX(5px);
+            }
+          }
+          .arrow{
+            position: absolute;
+            right: 1rem;
+            color: #212121;
+            font-size: 2rem;
+            transition: all ease-in-out 200ms;
+          }
+          .wrapper{
+            position: absolute;
+            bottom: 0;
+            padding: 1rem;
+            .title{
+              font-size: 1.2rem;
+              font-weight: 700;
+              color: #212121;
+              margin-bottom: 0.5rem;
+              display: block;
+            }
+            .des{
+              display: block;
+              font-size: 0.8rem;
+              color: #666;
+            }
+          }
+        }
+      }
     }
     &-nav{
       padding: 2rem;

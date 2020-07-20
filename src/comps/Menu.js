@@ -63,13 +63,48 @@ export default function Menu() {
         }}
         className="menu-content"
       >
-        <motion.div initial={{x: -100, opacity: 0}} animate={{x:0, opacity: 1, transition: {delay: 1}}} className="menu-content-social">
-          SDS 348, MMM Hall of Residence,
-          <br/> IIT Kharagpur, WB 721-302
-          <br/><br/>
-          ajajaj2807@gmail.com
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1, transition: { delay: 1 } }}
+          className="menu-content-social"
+        >
+          <div className="btns">
+            <div className="btn">
+              <div className="arrow">&rarr;</div>
+              <div className="wrapper">
+                <span className="title">Proposals</span>
+                <span className="des">
+                  A list of proposals for academic year 2020-2021
+                </span>
+              </div>
+            </div>
+            <div className="btn">
+              <div className="arrow">&rarr;</div>
+              <div className="wrapper">
+                <span className="title">Suggest</span>
+                <span className="des">
+                  Fill a short form to send your suggestions
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="address">
+            SDS 348, MMM Hall of Residence,
+            <br /> IIT Kharagpur, WB 721-302
+            <br />
+            <br />
+            ajajaj2807@gmail.com
+          </div>
         </motion.div>
-        <motion.div initial={{x: -50, opacity: 0}} animate={{x:0, opacity: 1, transition: {duration: 0.5,delay: 0.8, staggerChildren: 1}}} className="menu-content-nav">
+        <motion.div
+          initial={{ x: -50, opacity: 0 }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: { duration: 0.5, delay: 0.8, staggerChildren: 1 },
+          }}
+          className="menu-content-nav"
+        >
           <motion.a href="#">About</motion.a>
           <motion.a href="#">Credentials</motion.a>
           <motion.a href="#">Contact</motion.a>
