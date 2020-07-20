@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.scss";
+import Menu from './comps/Menu'
 
 function App() {
+
+  const [open, setOpen] = useState(true)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <div className="menu-icon" onClick={() => setOpen(!open)}>{open ? 'Close' : 'Menu'}</div>
+      {
+        open ? <Menu /> : null
+      }
+      <div className="main-pic">photo</div>
+      <div className="main-content">
+        <span className="main-content-title">
+          Hello{" "}
+          <span role="img" aria-label="waving hand">
+            👋
+          </span>
+          , <br /> I am Abhinav
+        </span>
+        <span className="main-content-sub">
+          4th year Undergraduate Student at <br /> Indian Institute of
+          technology, Kharagpur
+        </span>
+      </div>
+      <div className="btn-group">
+        <a href="#">Proposals &rarr;</a>
+        <a href="#">Suggest &rarr;</a>
+      </div>
     </div>
   );
 }

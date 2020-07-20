@@ -1,0 +1,138 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  &-pic {
+    width: 40%;
+    background-color: #e6e6e6;
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+    &-title {
+      font-size: 3rem;
+      font-weight: 900;
+    }
+    &-sub {
+      color: #444;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.menu-icon {
+  position: absolute;
+  top: 4rem;
+  right: 6rem;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.btn-group {
+  position: absolute;
+  bottom: 4rem;
+  right: 6rem;
+  display: flex;
+  flex-direction: column;
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #090C9B;
+    margin-top: 1rem;
+    transition: all ease-in-out 120ms;
+    &:hover{
+      transform:translateX(4px);
+      font-weight: 700;
+    }
+  }
+}
+
+.menu{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100vh;
+  width: 100vw;
+  &-overlay-one{
+    height: 100%;
+    width:100%;
+    background-color: black;
+    position: absolute;
+    z-index: 3;
+  }
+  &-overlay-two{
+    height: 100%;
+    width:100%;
+    background-color: #E55934;
+    position: absolute;
+    z-index: 4;
+  }
+  &-overlay-three{
+    height: 100%;
+    width:100%;
+    background-color: #D9594C;
+    position: absolute;
+    z-index: 5;
+  }
+  &-overlay-four{
+    height: 100%;
+    width:100%;
+    background-color: #CE8D66;
+    position: absolute;
+    z-index: 6;
+  }
+  &-content{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: #E55934;
+    display: flex;
+    padding: 6rem 2rem;
+    justify-content: space-around;
+    &-social{
+      padding: 2rem 0;
+      display: flex;
+      align-items: flex-end;
+      color: wheat;
+      font-weight: 500;
+    }
+    &-nav{
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      a{
+        font-size: 3rem;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 700;
+        margin-top: 1rem;
+        transition: all ease-in-out 150ms;
+        &:hover{
+          color: wheat;
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+}
