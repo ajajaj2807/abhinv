@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./App.scss";
 import Menu from './comps/Menu'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import Suggest from './comps/Suggest'
 
-function App() {
+function Home() {
 
   const [open, setOpen] = useState(false)
 
@@ -28,10 +30,21 @@ function App() {
       </div>
       <div className="btn-group">
         <a href="#">Proposals &rarr;</a>
-        <a href="#">Suggest &rarr;</a>
+        <a href="/suggest">Suggest &rarr;</a>
       </div>
     </div>
   );
+}
+
+function App () {
+  return (
+    <div>
+      <Router>
+        <Route path="/" exact component={Home} />
+        <Route path="/suggest" component={Suggest} />
+      </Router>
+    </div>
+  )
 }
 
 export default App;

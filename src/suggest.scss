@@ -1,0 +1,116 @@
+.suggest-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+  .header {
+    margin: 2rem 0;
+    padding: 1rem 0;
+    .title {
+      font-size: 2rem;
+      font-weight: 900;
+    }
+    .des {
+      margin: 0.5rem 0 1rem 0;
+      display: block;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #666;
+    }
+  }
+}
+
+.section{
+    padding: 1rem;
+    min-width: 70%;
+    .title{
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+    .des{
+        font-size: 0.8rem;
+        color: #464646;
+        font-weight: 600;
+    }
+    .form-content{
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        input, textarea{
+            resize: none;
+            margin: 0.5rem 0;
+            padding: 0.8rem 1rem;
+            font-family: 'Montserrat';
+            border-radius: 6px;
+            border: none;
+            font-size: 1.2rem;
+            background: #e6e6e6;
+        }
+        textarea{
+            min-height: 300px;
+        }
+    }
+}
+
+button{
+    border: none;
+    outline: none;
+    background-color: #292CBB;
+    padding: 0.5rem 2rem;
+    font-family: 'Montserrat';
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    &:hover{
+        opacity: 0.9;
+    }
+}
+
+.thank{
+    background: #2196f3;
+    min-width: 80%;
+    border-radius: 8px;
+    padding: 6rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    .title{
+        font-size: 2rem;
+        font-weight: 800;
+    }
+    .des{
+        font-weight: 600;
+        margin-top: 0.5rem;
+    }
+    .controls{
+        margin-top: 2rem;
+        button{
+            margin: 0 1rem;
+            font-size: 1rem;
+            background: #eef;
+            color: #292CBB;
+        }
+    }
+}
+
+.progress{
+    position: absolute;
+    top: 10%;
+    height: 10px;
+    background: #e6e6e6;
+    width: 80%;
+    border-radius: 8px;
+    .bar{
+        transition: all ease-in-out 200ms;
+        height: 100%;
+        background: #4caf50;
+        border-radius: 8px;
+    }
+}
