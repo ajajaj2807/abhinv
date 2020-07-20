@@ -79,7 +79,7 @@ export default function Suggest() {
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1, transition: transitions }}
         >
-          <span className="title">Thank you 😊</span>
+          <span className="title">Thank you!</span>
           <span className="des">
             Your response has been successfully shared lauda lasusn
           </span>

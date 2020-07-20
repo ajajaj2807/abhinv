@@ -121,6 +121,7 @@ body {
       flex-direction: column;
       .btns{
         .btn{
+          display: block;
           cursor: pointer;
           height: 150px;
           width: 250px;

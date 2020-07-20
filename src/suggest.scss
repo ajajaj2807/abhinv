@@ -77,6 +77,10 @@ button{
     color: #292CBB;
     margin: 1rem 0;
     font-size: 1rem;
+    cursor: pointer;
+    &:hover{
+        color: #494CCB;
+    }
 }
 
 .thank{

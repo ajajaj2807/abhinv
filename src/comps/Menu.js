@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import {Link} from 'react-router-dom'
 
 export default function Menu() {
   const easing = [0.17, 0.37, 0.63, 0.47];
@@ -69,7 +70,7 @@ export default function Menu() {
           className="menu-content-social"
         >
           <div className="btns">
-            <div className="btn">
+            <Link className="btn" to="/">
               <div className="arrow">&rarr;</div>
               <div className="wrapper">
                 <span className="title">Proposals</span>
@@ -77,8 +78,8 @@ export default function Menu() {
                   A list of proposals for academic year 2020-2021
                 </span>
               </div>
-            </div>
-            <div className="btn">
+            </Link>
+            <Link to="/suggest" className="btn">
               <div className="arrow">&rarr;</div>
               <div className="wrapper">
                 <span className="title">Suggest</span>
@@ -86,7 +87,7 @@ export default function Menu() {
                   Fill a short form to send your suggestions
                 </span>
               </div>
-            </div>
+            </Link>
           </div>
           <div className="address">
             SDS 348, MMM Hall of Residence,

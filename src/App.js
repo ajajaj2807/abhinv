@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.scss";
 import Menu from "./comps/Menu";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Suggest from "./comps/Suggest";
 
 function Home() {
@@ -28,8 +28,8 @@ function Home() {
         </span>
       </div>
       <div className="btn-group">
-        <a href="#">Proposals &rarr;</a>
-        <a href="/suggest">Suggest &rarr;</a>
+        <Link to="/">Proposals &rarr;</Link>
+        <Link to="/suggest">Suggest &rarr;</Link>
       </div>
     </div>
   );
