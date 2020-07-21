@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../suggest.scss";
+import "../styles/suggest.scss";
 import { motion } from "framer-motion";
 import { firestore } from "../firebase";
 import { ReactComponent as SuccessIcon } from "../icons/success.svg";
@@ -20,6 +20,7 @@ export default function Suggest() {
     const createdAt = Date.parse(Date());
     const post = { ...data, time: createdAt };
     const docRef = await firestore.collection("responses").add(post);
+    // eslint-disable-next-line no-unused-vars
     const doc = await docRef.get();
 
     setSlide(3);

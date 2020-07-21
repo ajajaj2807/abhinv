@@ -1,19 +1,17 @@
 import React, { useState } from "react";
-import "./App.scss";
+import "./styles/App.scss";
 import Menu from "./comps/Menu";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link,
-  useLocation,
-} from "react-router-dom";
+import Faq from './comps/Faq'
+import Contact from './comps/Contact'
+import Credentials from './comps/Credentials'
+import Proposals from './comps/Proposals'
+import { Route, Switch, Link, useLocation } from "react-router-dom";
 import Suggest from "./comps/Suggest";
 import { ReactComponent as CloseIcon } from "./icons/close.svg";
 import { ReactComponent as MenuIcon } from "./icons/menu.svg";
 import { ReactComponent as ArrowIcon } from "./icons/arrow.svg";
 import { motion, AnimatePresence } from "framer-motion";
-import {pageTransitions} from './animations'
+import { pageTransitions } from "./animations";
 
 function Home() {
   const [open, setOpen] = useState(false);
@@ -45,7 +43,7 @@ function Home() {
         </span>
       </div>
       <div className="btn-group">
-        <Link to="/">
+        <Link to="/proposals">
           Proposals <ArrowIcon />
         </Link>
         <Link to="/suggest">
@@ -65,6 +63,10 @@ function App() {
         <Switch location={location} key={location.pathname}>
           <Route path="/" exact component={Home} />
           <Route path="/suggest" component={Suggest} />
+          <Route path="/proposals" component={Proposals} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/credentials" component={Credentials} />
+          <Route path="/faq" component={Faq} />
         </Switch>
       </AnimatePresence>
     </div>

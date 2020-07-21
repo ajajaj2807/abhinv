@@ -195,3 +195,16 @@ body {
     }
   }
 }
+
+.page-wrapper{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 70%;
+  margin: 0 auto;
+  .title{
+    text-align: center;
+    font-weight: 800;
+    margin-top: 2rem;
+  }
+}

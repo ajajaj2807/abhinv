@@ -68,12 +68,12 @@ export default function Menu() {
         className="menu-content"
       >
         <motion.div
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1, transition: { delay: 1 } }}
+          initial={{ x: -30, opacity: 0 }}
+          animate={{ x: 0, opacity: 1, transition: { duration:0.5, delay: 1 } }}
           className="menu-content-social"
         >
           <div className="btns">
-            <Link className="btn" to="/">
+            <Link className="btn" to="/proposals">
               <div className="arrow">
                 <ArrowIcon />
               </div>
@@ -105,7 +105,7 @@ export default function Menu() {
           </div>
         </motion.div>
         <motion.div
-          initial={{ x: -50, opacity: 0 }}
+          initial={{ x: -30, opacity: 0 }}
           animate={{
             x: 0,
             opacity: 1,
@@ -113,10 +113,9 @@ export default function Menu() {
           }}
           className="menu-content-nav"
         >
-          <motion.a href="#">About</motion.a>
-          <motion.a href="#">Credentials</motion.a>
-          <motion.a href="#">Contact</motion.a>
-          <motion.a href="#">FAQ</motion.a>
+          <Link to="/credentials">Credentials</Link>
+          <Link to="/faq">FAQ</Link>
+          <Link to="/contact">Contact</Link>
         </motion.div>
       </motion.div>
     </div>
