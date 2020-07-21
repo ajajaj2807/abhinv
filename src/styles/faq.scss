@@ -11,6 +11,11 @@
   margin-top: 1rem;
   border-radius: 6px;
   transition: all ease-in-out 100ms;
+  user-select: none; /* standard syntax */
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
   &:hover {
     background-color: #d6d6d6;
   }
@@ -22,11 +27,6 @@
     .icon {
       font-size: 3rem;
       transition: all ease-in-out 120ms;
-      user-select: none; /* standard syntax */
-      -webkit-user-select: none; /* webkit (safari, chrome) browsers */
-      -moz-user-select: none; /* mozilla browsers */
-      -khtml-user-select: none; /* webkit (konqueror) browsers */
-      -ms-user-select: none; /* IE10+ */
     }
   }
   .question {

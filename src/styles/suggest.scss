@@ -95,9 +95,15 @@ button{
     }
 }
 
+.loading{
+    text-align: center;
+    color: #194cfb;
+}
+
 .thank{
-    background: #2196f3;
-    min-width: 80%;
+    background: #194cfb;
+    border-radius: 8px;
+    // min-width: 70%;
     border-radius: 8px;
     padding: 6rem 4rem;
     display: flex;
@@ -122,8 +128,9 @@ button{
             margin: 0 1rem;
             font-size: 1rem;
             font-weight: 700;
-            background: #2186e3;
+            background: #093ceb;
             color: #fff;
+            cursor: pointer;
         }
     }
 }

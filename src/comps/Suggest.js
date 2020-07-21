@@ -8,7 +8,7 @@ import { pageTransitions } from "../animations";
 import { ReactComponent as Arrow } from "../icons/arrow.svg";
 
 export default function Suggest() {
-  const [slide, setSlide] = useState(0);
+  const [slide, setSlide] = useState(3);
   const [data, setData] = useState({});
   const transitions = {
     duration: 0.5,
@@ -38,7 +38,7 @@ export default function Suggest() {
         {slide === -1 ? (
           <div
             className="bar"
-            style={{ width: "100%", background: "#2196f3" }}
+            style={{ width: "100%", background: "#194cfb" }}
           ></div>
         ) : (
           <div className="bar" style={{ width: slide * 33.33 + "%" }}></div>
@@ -119,9 +119,13 @@ export default function Suggest() {
         </motion.div>
       ) : null}
       {slide === -1 ? (
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1 }}
+          className="loading"
+        >
           <b>Hold on, We are submitting your response!</b>
-        </div>
+        </motion.div>
       ) : null}
       {slide === 3 ? (
         <motion.div
@@ -129,15 +133,32 @@ export default function Suggest() {
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1, transition: transitions }}
         >
-          <SuccessIcon fill="white" />
-          <span className="title">Thank you!</span>
-          <span className="des">
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1, transition: { delay: 0.3 } }}
+          >
+            <SuccessIcon fill="white" />
+          </motion.div>
+          <motion.span
+            initial={{ y: 30 }}
+            animate={{ y: 0, transition: { delay: 0.5 } }}
+            className="title"
+          >
+            Thank you!
+          </motion.span>
+          <motion.span
+            initial={{ y: 30 }}
+            animate={{ y: 0, transition: { delay: 0.5 } }}
+            className="des"
+          >
             Your response has been successfully shared
-          </span>
-          <div className="controls">
+          </motion.span>
+          <motion.div initial={{y:10, opacity: 0}} animate={{y:0,opacity:1, transition:{delay:0.8}}} className="controls">
             <button onClick={() => setSlide(0)}>Submit Another</button>
-            <button>Back to Home</button>
-          </div>
+            <Link to="/">
+              <button>Back to Home</button>
+            </Link>
+          </motion.div>
         </motion.div>
       ) : null}
     </motion.div>
