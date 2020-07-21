@@ -71,6 +71,10 @@ button{
     }
 }
 
+.home-btn{
+    text-decoration: none;
+}
+
 .back{
     padding: 0;
     background: transparent;
@@ -78,6 +82,14 @@ button{
     margin: 1rem 0;
     font-size: 1rem;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    svg{
+        fill: #292CBB;
+        transform:rotateZ(180deg);
+        height: 1rem;
+        width: 2rem;
+    }
     &:hover{
         color: #494CCB;
     }

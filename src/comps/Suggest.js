@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { firestore } from "../firebase";
 import { ReactComponent as SuccessIcon } from "../icons/success.svg";
 import { Link } from "react-router-dom";
-import {pageTransitions} from '../animations'
+import { pageTransitions } from "../animations";
+import { ReactComponent as Arrow } from "../icons/arrow.svg";
 
 export default function Suggest() {
   const [slide, setSlide] = useState(0);
@@ -41,7 +42,6 @@ export default function Suggest() {
         ) : (
           <div className="bar" style={{ width: slide * 33.33 + "%" }}></div>
         )}
-        <Link to="/">Home</Link>
       </div>
       {slide === 0 ? (
         <motion.div
@@ -49,6 +49,12 @@ export default function Suggest() {
           animate={{ x: 0, opacity: 1, transition: transitions }}
           className="header"
         >
+          <Link className="home-btn" to="/">
+            <button className="back">
+              <Arrow /> Home
+            </button>
+          </Link>
+
           <span className="title">Suggest your views</span>
           <span className="des">
             Abhinav is asking for your help to suggest improvements which can be
@@ -64,8 +70,7 @@ export default function Suggest() {
           animate={{ x: 0, opacity: 1, transition: transitions }}
         >
           <button className="back" onClick={() => setSlide(0)}>
-            {" "}
-            &larr; Back
+            <Arrow /> Back
           </button>
           <div className="title">Basic Details</div>
           <div className="des">
@@ -96,7 +101,7 @@ export default function Suggest() {
         >
           <button className="back" onClick={() => setSlide(1)}>
             {" "}
-            &larr; Back
+            <Arrow /> Back
           </button>
 
           <div className="title">Your Suggestion</div>
