@@ -3,6 +3,8 @@ import "../suggest.scss";
 import { motion } from "framer-motion";
 import { firestore } from "../firebase";
 import { ReactComponent as SuccessIcon } from "../icons/success.svg";
+import { Link } from "react-router-dom";
+import {pageTransitions} from '../animations'
 
 export default function Suggest() {
   const [slide, setSlide] = useState(0);
@@ -23,13 +25,23 @@ export default function Suggest() {
   };
 
   return (
-    <div className="suggest-wrapper">
+    <motion.div
+      initial="enter"
+      exit="exit"
+      animate="in"
+      variants={pageTransitions}
+      className="suggest-wrapper"
+    >
       <div className="progress">
         {slide === -1 ? (
-          <div className="bar" style={{ width: "100%", background: '#2196f3' }}></div>
+          <div
+            className="bar"
+            style={{ width: "100%", background: "#2196f3" }}
+          ></div>
         ) : (
           <div className="bar" style={{ width: slide * 33.33 + "%" }}></div>
         )}
+        <Link to="/">Home</Link>
       </div>
       {slide === 0 ? (
         <motion.div
@@ -122,6 +134,6 @@ export default function Suggest() {
           </div>
         </motion.div>
       ) : null}
-    </div>
+    </motion.div>
   );
 }

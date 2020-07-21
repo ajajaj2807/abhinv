@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import { ReactComponent as ArrowIcon } from "../icons/arrow.svg";
 
 export default function Menu() {
@@ -9,12 +9,14 @@ export default function Menu() {
   return (
     <div className="menu">
       <motion.div
+        key="main-menu"
         initial={{ y: "-120%", skewY: 20 }}
         animate={{
           y: 0,
           skewY: 0,
           transition: { ease: easing, delay: 0, damping: 0 },
         }}
+        exit={{ opacity: 0, y: -500 }}
         className="menu-overlay-one"
       ></motion.div>
       <motion.div
@@ -72,7 +74,9 @@ export default function Menu() {
         >
           <div className="btns">
             <Link className="btn" to="/">
-              <div className="arrow"><ArrowIcon/></div>
+              <div className="arrow">
+                <ArrowIcon />
+              </div>
               <div className="wrapper">
                 <span className="title">Proposals</span>
                 <span className="des">
@@ -81,7 +85,9 @@ export default function Menu() {
               </div>
             </Link>
             <Link to="/suggest" className="btn">
-              <div className="arrow"><ArrowIcon/></div>
+              <div className="arrow">
+                <ArrowIcon />
+              </div>
               <div className="wrapper">
                 <span className="title">Suggest</span>
                 <span className="des">

@@ -1,17 +1,31 @@
 import React, { useState } from "react";
 import "./App.scss";
 import Menu from "./comps/Menu";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  useLocation,
+} from "react-router-dom";
 import Suggest from "./comps/Suggest";
 import { ReactComponent as CloseIcon } from "./icons/close.svg";
 import { ReactComponent as MenuIcon } from "./icons/menu.svg";
 import { ReactComponent as ArrowIcon } from "./icons/arrow.svg";
+import { motion, AnimatePresence } from "framer-motion";
+import {pageTransitions} from './animations'
 
 function Home() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="main">
+    <motion.div
+      initial="enter"
+      exit="exit"
+      animate="in"
+      variants={pageTransitions}
+      className="main"
+    >
       <div className="menu-icon" onClick={() => setOpen(!open)}>
         {!open ? <MenuIcon /> : <CloseIcon fill="white" />}
       </div>
@@ -31,22 +45,28 @@ function Home() {
         </span>
       </div>
       <div className="btn-group">
-        <Link to="/">Proposals <ArrowIcon/></Link>
-        <Link to="/suggest">Suggest <ArrowIcon/></Link>
+        <Link to="/">
+          Proposals <ArrowIcon />
+        </Link>
+        <Link to="/suggest">
+          Suggest <ArrowIcon />
+        </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
 function App() {
+  const location = useLocation();
+
   return (
     <div>
-      <Router>
-        <Switch>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.pathname}>
           <Route path="/" exact component={Home} />
           <Route path="/suggest" component={Suggest} />
         </Switch>
-      </Router>
+      </AnimatePresence>
     </div>
   );
 }
