@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Montserrat";
+  font-family: 'Montserrat', sans-serif;
   overflow: hidden;
 }
 
@@ -55,61 +57,68 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #090C9B;
-    margin-top: 1rem;
+    color: #090c9b;
     transition: all ease-in-out 120ms;
-    &:hover{
-      transform:translateX(4px);
+    display: flex;
+    align-items: center;
+    svg{
+      fill: #090c9b;
+      height: 30px;
+      width: 25px;
+      margin-left: 10px;
+    }
+    &:hover {
+      transform: translateX(4px);
       font-weight: 700;
     }
   }
 }
 
-.menu{
+.menu {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
   height: 100vh;
   width: 100vw;
-  &-overlay-one{
+  &-overlay-one {
     height: 100%;
-    width:100%;
+    width: 100%;
     background-color: black;
     position: absolute;
     z-index: 3;
   }
-  &-overlay-two{
+  &-overlay-two {
     height: 100%;
-    width:100%;
-    background-color: #E55934;
+    width: 100%;
+    background-color: #e55934;
     position: absolute;
     z-index: 4;
   }
-  &-overlay-three{
+  &-overlay-three {
     height: 100%;
-    width:100%;
-    background-color: #D9594C;
+    width: 100%;
+    background-color: #d9594c;
     position: absolute;
     z-index: 5;
   }
-  &-overlay-four{
+  &-overlay-four {
     height: 100%;
-    width:100%;
-    background-color: #CE8D66;
+    width: 100%;
+    background-color: #ce8d66;
     position: absolute;
     z-index: 6;
   }
-  &-content{
+  &-content {
     position: absolute;
     height: 100%;
     width: 100%;
     z-index: 10;
-    background-color: #E55934;
+    background-color: #e55934;
     display: flex;
     padding: 6rem 2rem;
     justify-content: space-around;
-    &-social{
+    &-social {
       padding: 2rem 0;
       display: flex;
       align-items: flex-end;
@@ -119,8 +128,8 @@ body {
       justify-content: space-evenly;
       align-items: flex-start;
       flex-direction: column;
-      .btns{
-        .btn{
+      .btns {
+        .btn {
           display: block;
           cursor: pointer;
           height: 150px;
@@ -128,33 +137,36 @@ body {
           background-color: #fee;
           position: relative;
           margin: 1rem 0;
-          border: 2px solid #E55934;
+          border: 2px solid #e55934;
           transition: all ease-in-out 200ms;
-          &:hover{
+          &:hover {
             border: 2px solid #944;
-            .arrow{
+            .arrow {
               transform: translateX(5px);
             }
           }
-          .arrow{
+          .arrow {
             position: absolute;
             right: 1rem;
             color: #212121;
             font-size: 2rem;
             transition: all ease-in-out 200ms;
+            svg{
+              width: 25px;
+            }
           }
-          .wrapper{
+          .wrapper {
             position: absolute;
             bottom: 0;
             padding: 1rem;
-            .title{
+            .title {
               font-size: 1.2rem;
               font-weight: 700;
               color: #212121;
               margin-bottom: 0.5rem;
               display: block;
             }
-            .des{
+            .des {
               display: block;
               font-size: 0.8rem;
               color: #666;
@@ -163,19 +175,19 @@ body {
         }
       }
     }
-    &-nav{
+    &-nav {
       padding: 2rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      a{
+      a {
         font-size: 3rem;
         text-decoration: none;
         color: #fff;
         font-weight: 700;
         margin-top: 1rem;
         transition: all ease-in-out 150ms;
-        &:hover{
+        &:hover {
           color: wheat;
           transform: translateX(5px);
         }

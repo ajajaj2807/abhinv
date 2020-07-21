@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Suggest from "./comps/Suggest";
 import { ReactComponent as CloseIcon } from "./icons/close.svg";
 import { ReactComponent as MenuIcon } from "./icons/menu.svg";
+import { ReactComponent as ArrowIcon } from "./icons/arrow.svg";
 
 function Home() {
   const [open, setOpen] = useState(false);
@@ -30,8 +31,8 @@ function Home() {
         </span>
       </div>
       <div className="btn-group">
-        <Link to="/">Proposals &rarr;</Link>
-        <Link to="/suggest">Suggest &rarr;</Link>
+        <Link to="/">Proposals <ArrowIcon/></Link>
+        <Link to="/suggest">Suggest <ArrowIcon/></Link>
       </div>
     </div>
   );

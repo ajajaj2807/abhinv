@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {Link} from 'react-router-dom'
+import { ReactComponent as ArrowIcon } from "../icons/arrow.svg";
 
 export default function Menu() {
   const easing = [0.17, 0.37, 0.63, 0.47];
@@ -71,7 +72,7 @@ export default function Menu() {
         >
           <div className="btns">
             <Link className="btn" to="/">
-              <div className="arrow">&rarr;</div>
+              <div className="arrow"><ArrowIcon/></div>
               <div className="wrapper">
                 <span className="title">Proposals</span>
                 <span className="des">
@@ -80,7 +81,7 @@ export default function Menu() {
               </div>
             </Link>
             <Link to="/suggest" className="btn">
-              <div className="arrow">&rarr;</div>
+              <div className="arrow"><ArrowIcon/></div>
               <div className="wrapper">
                 <span className="title">Suggest</span>
                 <span className="des">
