@@ -1,7 +1,22 @@
 .faq-container {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 2rem 0;
+}
+
+.more{
+  display: block;
+  font-weight: 600;
+  color: #464646;
+  a{
+    text-decoration: none;
+    color: #292CBB;
+    display: inline-block;
+    transition: all ease-in-out 120ms;
+    &:hover{
+      font-weight: 800;
+    }
+  }
 }
 
 .faq-single {

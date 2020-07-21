@@ -8,7 +8,7 @@ import { pageTransitions } from "../animations";
 import { ReactComponent as Arrow } from "../icons/arrow.svg";
 
 export default function Suggest() {
-  const [slide, setSlide] = useState(3);
+  const [slide, setSlide] = useState(0);
   const [data, setData] = useState({});
   const transitions = {
     duration: 0.5,
@@ -121,7 +121,7 @@ export default function Suggest() {
       {slide === -1 ? (
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1 }}
+          animate={{ opacity: 1,y:0, transition:{duration: 0.5} }}
           className="loading"
         >
           <b>Hold on, We are submitting your response!</b>
