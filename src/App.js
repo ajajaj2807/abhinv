@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import "./styles/App.scss";
 import Menu from "./comps/Menu";
-import Faq from './comps/Faq'
-import Contact from './comps/Contact'
-import Credentials from './comps/Credentials'
-import Proposals from './comps/Proposals'
+import Faq from "./comps/Faq";
+import Contact from "./comps/Contact";
+import Credentials from "./comps/Credentials";
+import Proposals from "./comps/Proposals";
 import { Route, Switch, Link, useLocation } from "react-router-dom";
 import Suggest from "./comps/Suggest";
 import { ReactComponent as CloseIcon } from "./icons/close.svg";
 import { ReactComponent as MenuIcon } from "./icons/menu.svg";
 import { ReactComponent as ArrowIcon } from "./icons/arrow.svg";
+
 import { motion, AnimatePresence } from "framer-motion";
 import { pageTransitions } from "./animations";
 
 function Home() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   return (
     <motion.div

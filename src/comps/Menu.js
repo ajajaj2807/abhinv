@@ -2,6 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ReactComponent as ArrowIcon } from "../icons/arrow.svg";
+import { ReactComponent as SuggestIcon } from "../icons/suggest.svg";
+import { ReactComponent as ProposalsIcon } from "../icons/proposals.svg";
+import { ReactComponent as ContactIcon } from "../icons/contact.svg";
+import { ReactComponent as FaqIcon } from "../icons/faq.svg";
+import { ReactComponent as CredsIcon } from "../icons/credentials.svg";
 
 export default function Menu() {
   const easing = [0.17, 0.37, 0.63, 0.47];
@@ -69,7 +74,11 @@ export default function Menu() {
       >
         <motion.div
           initial={{ x: -30, opacity: 0 }}
-          animate={{ x: 0, opacity: 1, transition: { duration:0.5, delay: 1 } }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: { duration: 0.5, delay: 1 },
+          }}
           className="menu-content-social"
         >
           <div className="btns">
@@ -78,6 +87,7 @@ export default function Menu() {
                 <ArrowIcon />
               </div>
               <div className="wrapper">
+                <ProposalsIcon />
                 <span className="title">Proposals</span>
                 <span className="des">
                   A list of proposals for academic year 2020-2021
@@ -89,6 +99,7 @@ export default function Menu() {
                 <ArrowIcon />
               </div>
               <div className="wrapper">
+                <SuggestIcon />
                 <span className="title">Suggest</span>
                 <span className="des">
                   Fill a short form to send your suggestions
@@ -113,9 +124,9 @@ export default function Menu() {
           }}
           className="menu-content-nav"
         >
-          <Link to="/credentials">Credentials</Link>
-          <Link to="/faq">FAQ</Link>
-          <Link to="/contact">Contact</Link>
+          <Link to="/credentials"> <CredsIcon/> Credentials</Link>
+          <Link to="/faq"> <FaqIcon/> FAQ</Link>
+          <Link to="/contact"> <ContactIcon/> Contact</Link>
         </motion.div>
       </motion.div>
     </div>

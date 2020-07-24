@@ -4,7 +4,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   overflow: hidden;
 }
 
@@ -61,7 +61,7 @@ body {
     transition: all ease-in-out 120ms;
     display: flex;
     align-items: center;
-    svg{
+    svg {
       fill: #090c9b;
       height: 30px;
       width: 25px;
@@ -91,21 +91,21 @@ body {
   &-overlay-two {
     height: 100%;
     width: 100%;
-    background-color: #e55934;
+    background-color: #090C8B;
     position: absolute;
     z-index: 4;
   }
   &-overlay-three {
     height: 100%;
     width: 100%;
-    background-color: #d9594c;
+    background-color: #FBC02D;
     position: absolute;
     z-index: 5;
   }
   &-overlay-four {
     height: 100%;
     width: 100%;
-    background-color: #ce8d66;
+    background-color: #494CEB;
     position: absolute;
     z-index: 6;
   }
@@ -114,7 +114,7 @@ body {
     height: 100%;
     width: 100%;
     z-index: 10;
-    background-color: #e55934;
+    background-color: #292CBB;
     display: flex;
     padding: 6rem 2rem;
     justify-content: space-around;
@@ -122,7 +122,7 @@ body {
       padding: 2rem 0;
       display: flex;
       align-items: flex-end;
-      color: wheat;
+      color: #FFEB3B;
       font-weight: 500;
       display: flex;
       justify-content: space-evenly;
@@ -134,13 +134,13 @@ body {
           cursor: pointer;
           height: 150px;
           width: 250px;
-          background-color: #fee;
+          background-color: #eef;
           position: relative;
           margin: 1rem 0;
-          border: 2px solid #e55934;
+          border: 2px solid #292CBB;
           transition: all ease-in-out 200ms;
           &:hover {
-            border: 2px solid #944;
+            border: 2px solid #090C9B;
             .arrow {
               transform: translateX(5px);
             }
@@ -151,7 +151,7 @@ body {
             color: #212121;
             font-size: 2rem;
             transition: all ease-in-out 200ms;
-            svg{
+            svg {
               width: 25px;
             }
           }
@@ -159,17 +159,23 @@ body {
             position: absolute;
             bottom: 0;
             padding: 1rem;
+            svg {
+              height: 2rem;
+              width: 2rem;
+              position: relative;
+              bottom: 0.5rem;
+            }
             .title {
               font-size: 1.2rem;
               font-weight: 700;
-              color: #212121;
+              color: #161616;
               margin-bottom: 0.5rem;
               display: block;
             }
             .des {
               display: block;
               font-size: 0.8rem;
-              color: #666;
+              color: #464646;
             }
           }
         }
@@ -183,26 +189,38 @@ body {
       a {
         font-size: 3rem;
         text-decoration: none;
-        color: #fff;
-        font-weight: 700;
+        color: #FFEB3B;
+        font-weight: 800;
         margin-top: 1rem;
         transition: all ease-in-out 150ms;
+        display: flex;
+        align-items: center;
+        svg {
+          fill: #FFEB3B;
+          height: 2.5rem;
+          width: 4rem;
+          transition: all ease-in-out 150ms;
+        }
         &:hover {
-          color: wheat;
+          color: #FBC02D;
           transform: translateX(5px);
+          svg {
+            transform: translateX(-5px);
+            fill: #FBC02D;
+          }
         }
       }
     }
   }
 }
 
-.page-wrapper{
+.page-wrapper {
   display: flex;
   flex-direction: column;
   padding: 2rem;
   width: 70%;
   margin: 0 auto;
-  .title{
+  .title {
     text-align: center;
     font-weight: 800;
     margin-top: 2rem;
