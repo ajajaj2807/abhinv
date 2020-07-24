@@ -23,6 +23,10 @@
             a{
                 text-decoration: none;
                 color: #292CBB;
+                transition: all ease-in-out 120ms;
+                &:hover{
+                    font-weight: 700;
+                }
             }
         }
         .send-btn{
