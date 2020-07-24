@@ -49,30 +49,30 @@ export default function Contact() {
         {sent === 1 ? null : (
           <div className="form-wrapper">
             <div className="fi">
-              <label htmlFor="name">Full Name</label>
               <input
                 id="name"
                 name="name"
                 type="name"
                 placeholder="Abhinav Kumar"
               ></input>
+              <label htmlFor="name">Full Name</label>
             </div>
             <div className="fi">
-              <label htmlFor="email">Email</label>
               <input
                 id="email"
                 name="email"
                 type="email"
                 placeholder="example@gmail.com"
               ></input>
+              <label htmlFor="email">Email</label>
             </div>
             <div className="fta">
-              <label htmlFor="message">Message</label>
               <textarea
                 id="message"
                 name="message"
                 placeholder="Your Message Here"
               ></textarea>
+              <label htmlFor="message">Message</label>
             </div>
             <span className="form-warn">
               Note: If you want to send a suggestion, please go to{" "}

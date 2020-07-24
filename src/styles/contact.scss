@@ -9,6 +9,12 @@
         grid-template-columns: 1fr 1fr;
         .fta{
             grid-column: 1/ span 2;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .fi{
+            display: flex;
+            flex-direction: column-reverse;
         }
         .form-warn{
             grid-column: 1/ span 2;
@@ -38,6 +44,12 @@
             margin-top: 0.5rem;
             background-color: #e6e6e6;
             resize: none;
+            &:focus{
+                outline:none;
+            }
+            &:focus + label {
+                color: #292CBB;
+            }
         }
         textarea{
             height: 200px;
@@ -46,6 +58,7 @@
             display: block;
             font-size: 0.8rem;
             font-weight: 600;
+            transition: all ease-in-out 120ms;
         }
     }
     .info-wrapper{
@@ -54,8 +67,9 @@
         color: white;
         display: flex;
         flex-direction: column;
+        padding: 1rem 2rem;
+        justify-content: space-evenly;
         .isec{
-            padding: 1rem;
             .ist{
                 display: block;
                 letter-spacing: 2px;
@@ -78,12 +92,17 @@
                 color: #e6e6e6;
             }
             .icons-bar{
-                padding:  0.5rem 1rem;
-                background-color: #363636;
+                padding:  0.8rem 1rem;
+                background-color: #262626;
                 border-radius: 8px;
+                display: flex;
+                align-items: center;
                 a{
+                    margin: 0;
+                    padding: 0;
                     text-decoration: none;
                     transition: all ease-in-out 120ms;
+                    display: flex;
                     svg{
                         fill: #e6e6e6;
                         margin-right:1rem;
