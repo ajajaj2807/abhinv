@@ -10,6 +10,7 @@ import Suggest from "./comps/Suggest";
 import { ReactComponent as CloseIcon } from "./icons/close.svg";
 import { ReactComponent as MenuIcon } from "./icons/menu.svg";
 import { ReactComponent as ArrowIcon } from "./icons/arrow.svg";
+import dp from './images/dp.jpg'
 
 import { motion, AnimatePresence } from "framer-motion";
 import { pageTransitions } from "./animations";
@@ -29,7 +30,9 @@ function Home() {
         {!open ? <MenuIcon /> : <CloseIcon fill="white" />}
       </div>
       {open ? <Menu /> : null}
-      <div className="main-pic">photo</div>
+      <div className="main-pic">
+        <img src={dp} alt="Abhinav Kumar" />
+      </div>
       <div className="main-content">
         <span className="main-content-title">
           Hello{" "}
