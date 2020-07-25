@@ -228,6 +228,13 @@ body {
 }
 
 @media screen and (max-width: 560px) {
+  .page-wrapper{
+    width: 90%;
+    padding: 2rem 0;
+    .title{
+      font-size: 1.5rem;
+    }
+  }
   .menu-icon {
     top: 2rem;
     right: 2rem;
@@ -288,7 +295,10 @@ body {
       margin-top: 2rem;
       a{
         font-size: 2rem;
-        align-items: flex-start;
+        svg{
+          height: 1.8rem;
+          width: 3rem;
+        }
       }
     }
   }
