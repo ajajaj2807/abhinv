@@ -131,3 +131,23 @@
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 560px) {
+    .contact-wrapper{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+        .form-wrapper{
+            padding: 0;
+            .fi{
+                grid-column: 1/span 2;
+            }
+            input, textarea{
+                margin-top: 0.4rem;
+            }
+            textarea{
+                max-height: 150px;
+            }
+        }
+    }
+}

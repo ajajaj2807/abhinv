@@ -92,7 +92,7 @@ export default function Contact() {
             <span className="ist">
               <AddressIcon /> Address
             </span>
-            <span class="isd">
+            <span className="isd">
               SDS 348, MMM Hall of Residence, <br />
               IIT Kharagpur, WB, India 721-302
             </span>
@@ -102,19 +102,19 @@ export default function Contact() {
               <MailIcon />
               Mail
             </span>
-            <span class="isd">ajajaj2807@gmail.com</span>
+            <span className="isd">ajajaj2807@gmail.com</span>
           </div>
           <div className="isec">
             <span className="ist">
               <PhoneIcon /> Phone
             </span>
-            <span class="isd">+91-7426082035</span>
+            <span className="isd">+91-7426082035</span>
           </div>
           <div className="isec">
             <span className="ist">
               <SocialIcon /> Social
             </span>
-            <div class="isd">
+            <div className="isd">
               <div className="icons-bar">
                 <a
                   href="https://www.facebook.com"
