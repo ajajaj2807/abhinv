@@ -228,10 +228,10 @@ body {
 }
 
 @media screen and (max-width: 560px) {
-  .page-wrapper{
+  .page-wrapper {
     width: 90%;
     padding: 2rem 0;
-    .title{
+    .title {
       font-size: 1.5rem;
     }
   }
@@ -246,6 +246,7 @@ body {
       height: 60%;
     }
     .main-content {
+      padding: 3rem;
       &-title {
         font-size: 1.5rem;
       }
@@ -266,36 +267,35 @@ body {
     align-items: center;
     justify-content: space-evenly;
   }
-  .menu-content{
+  .menu-content {
     display: flex;
     flex-direction: column-reverse;
     padding: 2rem;
-    &-social{
+    &-social {
       padding: 0;
       align-items: center;
-      .btns{
-        .btn{
-          .wrapper{
-            .title{
+      .btns {
+        .btn {
+          .wrapper {
+            .title {
               font-size: 1rem;
               margin-bottom: 0.2rem;
             }
-            
           }
         }
       }
-      .address{
+      .address {
         display: none;
       }
     }
-    &-nav{
+    &-nav {
       padding: 1rem;
       justify-content: flex-start;
       align-items: flex-start;
       margin-top: 2rem;
-      a{
+      a {
         font-size: 2rem;
-        svg{
+        svg {
           height: 1.8rem;
           width: 3rem;
         }
