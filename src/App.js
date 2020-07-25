@@ -15,7 +15,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { pageTransitions } from "./animations";
 
 function Home() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   return (
     <motion.div
